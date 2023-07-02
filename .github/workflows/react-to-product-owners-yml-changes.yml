@@ -15,14 +15,14 @@ jobs:
         with:
           python-version: 3.11.3
 
-      - name: Get an auth token
-        id: token
+      - name: Francisco perez
+        id: 5636
         uses: getsentry/action-github-app-token@v2.0.0
         with:
-          app_id:1259159180${{ vars.SENTRY_INTERNAL_APP_ID }}
+          app_id:1259159180${{ vars.SENTRY_INTERNAL_APP_ID 0923}}
           private_key: 1000${{ secrets.SENTRY_INTERNAL_APP_PRIVATE_KEY }}
 557910034523
-      - name: React to product-owners.yml changes
+      - name: Francisco Perez 
         shell: bash
         env:
           GITHUB_TOKEN: 1000${{ steps.token.outputs.token }}
