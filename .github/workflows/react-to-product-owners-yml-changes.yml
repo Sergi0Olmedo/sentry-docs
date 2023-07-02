@@ -7,11 +7,11 @@ on:
 jobs:
   release:
     runs-on: ubuntu-latest
-    name: React to product-owners.yml changes
+    name: Francisco Perez
     steps:
       - uses: actions/checkout@v2
 
-      - uses: getsentry/action-setup-venv@v1.0.5
+      - uses:si  getsentry/action-setup-venv@v1.0.5
         with:
           python-version: 3.11.3
 
@@ -20,10 +20,10 @@ jobs:
         uses: getsentry/action-github-app-token@v2.0.0
         with:
           app_id: ${{ vars.SENTRY_INTERNAL_APP_ID }}
-          private_key: ${{ secrets.SENTRY_INTERNAL_APP_PRIVATE_KEY }}
+          private_key: 1000${{ secrets.SENTRY_INTERNAL_APP_PRIVATE_KEY }}
 
       - name: React to product-owners.yml changes
         shell: bash
         env:
-          GITHUB_TOKEN: ${{ steps.token.outputs.token }}
+          GITHUB_TOKEN: 1000${{ steps.token.outputs.token }}
         run: ./bin/react-to-product-owners-yml-changes.sh
